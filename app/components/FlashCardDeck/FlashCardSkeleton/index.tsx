@@ -4,9 +4,7 @@ import { motion } from 'framer-motion';
 
 export const FlashCardSkeleton = () => {
   return (
-    <div className="w-full bg-bg-secondary flex items-center justify-center">
-      <div className="w-full max-w-[800px] md:h-[587px] h-[521px] relative">
-        {/* 一整块的骨架屏 - 带流光动画 */}
+    <div className='w-[100vw] h-[100vh] bg-bg-tertiary'>
         <div className="w-full h-full bg-utility-scrollbar/30 rounded-2xl shadow-lg overflow-hidden relative">
           {/* 流光扫过动画 */}
           <motion.div
@@ -20,7 +18,6 @@ export const FlashCardSkeleton = () => {
             }}
           />
         </div>
-      </div>
     </div>
   );
 };
