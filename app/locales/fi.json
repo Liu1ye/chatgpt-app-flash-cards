@@ -1,17 +1,7 @@
 {
-  "quiz": {
-    "title": "Taylorin kaavan koe",
-    "showHint": "Näytä vihje",
-    "hideHint": "Piilota vihje",
-    "previous": "Edellinen",
-    "next": "Seuraava",
-    "complete": "Valmis",
-    "submit": "Lähetä",
-    "completeTitle": "Koe valmis!",
-    "score": "Pisteet",
-    "accuracy": "Tarkkuus",
-    "timeSpent": "Käytetty aika",
-    "retake": "Uudelleen koe",
-    "hint": "Vihje"
+  "card": {
+    "tip": "Avaruus: Käännä kortti • ←/→: Edellinen/Seuraava",
+    "cards": "kortit",
+    "seeans": "Näytä vastaus"
   }
 }

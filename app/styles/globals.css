@@ -56,4 +56,10 @@
   div.rcs-custom-scroll .rcs-custom-scrollbar {
     width: 4px;
   }
+
+  /* Utility classes for 3D card flip */
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
 }

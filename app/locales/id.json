@@ -1,17 +1,7 @@
 {
-  "quiz": {
-    "title": "Kuis Rumus Taylor",
-    "showHint": "Tampilkan Petunjuk",
-    "hideHint": "Sembunyikan Petunjuk",
-    "previous": "Sebelumnya",
-    "next": "Selanjutnya",
-    "complete": "Selesaikan",
-    "submit": "Kirim",
-    "completeTitle": "Kuis Selesai!",
-    "score": "Skor",
-    "accuracy": "Akurasi",
-    "timeSpent": "Waktu yang Dihabiskan",
-    "retake": "Ulang Kuis",
-    "hint": "Petunjuk"
+  "card": {
+    "tip": "Ruang: Kartu flip • ←/→: Sebelumnya/Selanjutnya",
+    "cards": "kartu",
+    "seeans": "Lihat jawaban"
   }
 }

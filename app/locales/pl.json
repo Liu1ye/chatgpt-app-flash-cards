@@ -1,17 +1,7 @@
 {
-  "quiz": {
-    "title": "Quiz z Formuły Taylora",
-    "showHint": "Pokaż wskazówkę",
-    "hideHint": "Ukryj wskazówkę",
-    "previous": "Poprzedni",
-    "next": "Następny",
-    "complete": "Zakończ",
-    "submit": "Prześlij",
-    "completeTitle": "Quiz zakończony!",
-    "score": "Wynik",
-    "accuracy": "Dokładność",
-    "timeSpent": "Czas spędzony",
-    "retake": "Powtórz quiz",
-    "hint": "Wskazówka"
+  "card": {
+    "tip": "Przestrzeń: Przewróć kartę • ←/→: Poprzednia/Następna",
+    "cards": "karty",
+    "seeans": "Zobacz odpowiedź"
   }
 }

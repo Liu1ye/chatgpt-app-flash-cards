@@ -1,17 +1,7 @@
 {
-  "quiz": {
-    "title": "Taylor'i valemi test",
-    "showHint": "Näita vihjet",
-    "hideHint": "Peida vihje",
-    "previous": "Eelmine",
-    "next": "Järgmine",
-    "complete": "Lõpeta",
-    "submit": "Esita",
-    "completeTitle": "Test on lõpetatud!",
-    "score": "Skoor",
-    "accuracy": "Täpsus",
-    "timeSpent": "Kulutatud aeg",
-    "retake": "Korda testi",
-    "hint": "Vihje"
+  "card": {
+    "tip": "Ruum: Pööratav kaart • ←/→: Eelmine/Järgmine",
+    "cards": "kaardid",
+    "seeans": "Vaata vastust"
   }
 }

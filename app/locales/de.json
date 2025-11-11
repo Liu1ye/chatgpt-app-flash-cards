@@ -1,17 +1,7 @@
 {
-  "quiz": {
-    "title": "Taylor-Formel-Quiz",
-    "showHint": "Hinweis anzeigen",
-    "hideHint": "Hinweis ausblenden",
-    "previous": "Vorherige",
-    "next": "Nächste",
-    "complete": "Abschließen",
-    "submit": "Einreichen",
-    "completeTitle": "Quiz abgeschlossen!",
-    "score": "Punktzahl",
-    "accuracy": "Genauigkeit",
-    "timeSpent": "Verbrachte Zeit",
-    "retake": "Quiz wiederholen",
-    "hint": "Hinweis"
+  "card": {
+    "tip": "Raum: Karte umdrehen • ←/→: Vorherige/Nächste",
+    "cards": "Karten",
+    "seeans": "Antwort anzeigen"
   }
 }

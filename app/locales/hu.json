@@ -1,17 +1,7 @@
 {
-  "quiz": {
-    "title": "Taylor Formula Kvíz",
-    "showHint": "Javaslat megjelenítése",
-    "hideHint": "Javaslat elrejtése",
-    "previous": "Előző",
-    "next": "Következő",
-    "complete": "Befejezés",
-    "submit": "Beküldés",
-    "completeTitle": "A kvíz befejeződött!",
-    "score": "Pontszám",
-    "accuracy": "Pontosság",
-    "timeSpent": "Eltöltött idő",
-    "retake": "Kvíz újra",
-    "hint": "Javaslat"
+  "card": {
+    "tip": "Űr: Kártya megfordítása • ←/→: Előző/Következő",
+    "cards": "kártyák",
+    "seeans": "Válasz megtekintése"
   }
 }

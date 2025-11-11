@@ -39,7 +39,7 @@ const handler = createMcpHandler(async (server) => {
     invoked: "Flash cards loaded",
     html: html,
     description: "Generates flash cards based on the user's input",
-    widgetDomain: "https://nextjs.org/docs",
+    widgetDomain: "https://sider.ai",
   };
   server.registerResource(
     "flash-cards-widget",
@@ -79,9 +79,9 @@ const handler = createMcpHandler(async (server) => {
         data: z.object({
           title: z.string().describe("The title of the flash cards"),
           description: z.string().describe("The description of the flash cards"),
-          questionNumber: z.number().int().min(1).max(50).default(5).describe("Number of questions to generate"),
           flashCards: z.array(
             z.object({
+              id: z.string().describe("The id of the flash card"),
               question: z.string().describe("The question of the flash card"),
               answer: z.string().describe("The answer of the flash card"),
             })
@@ -94,9 +94,9 @@ const handler = createMcpHandler(async (server) => {
         data: z.object({
           title: z.string(),
           description: z.string(),
-          questionNumber: z.number(),
           flashCards: z.array(
             z.object({
+              id: z.string(),
               question: z.string(),
               answer: z.string(),
             })
@@ -108,7 +108,7 @@ const handler = createMcpHandler(async (server) => {
     async (args) => {
       // Return only the fields that the widget needs as structuredContent
       const { language, data } = args;
-      const { title, description, questionNumber, flashCards } = data;
+      const { title, description, flashCards } = data;
       return {
         content: [],
         structuredContent: {
@@ -116,7 +116,6 @@ const handler = createMcpHandler(async (server) => {
           data: {
             title,
             description,
-            questionNumber,
             flashCards,
           },
         },

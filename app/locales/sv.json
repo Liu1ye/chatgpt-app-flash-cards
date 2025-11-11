@@ -1,17 +1,7 @@
 {
-  "quiz": {
-    "title": "Taylor Formels Quiz",
-    "showHint": "Visa Ledtråd",
-    "hideHint": "Dölj Ledtråd",
-    "previous": "Föregående",
-    "next": "Nästa",
-    "complete": "Avsluta",
-    "submit": "Skicka in",
-    "completeTitle": "Quiz Avslutat!",
-    "score": "Poäng",
-    "accuracy": "Noggrannhet",
-    "timeSpent": "Tid Använd",
-    "retake": "Gör om Quiz",
-    "hint": "Ledtråd"
+  "card": {
+    "tip": "Utrymme: Vänd kort • ←/→: Föregående/Nästa",
+    "cards": "kort",
+    "seeans": "Se svar"
   }
 }

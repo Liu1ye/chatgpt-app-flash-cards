@@ -1,17 +1,7 @@
 {
-  "quiz": {
-    "title": "Taylor Formule Quiz",
-    "showHint": "Toon Hint",
-    "hideHint": "Verberg Hint",
-    "previous": "Vorige",
-    "next": "Volgende",
-    "complete": "Voltooi",
-    "submit": "Indienen",
-    "completeTitle": "Quiz Voltooid!",
-    "score": "Score",
-    "accuracy": "Nauwkeurigheid",
-    "timeSpent": "Tijd Besteed",
-    "retake": "Quiz Herhalen",
-    "hint": "Hint"
+  "card": {
+    "tip": "Ruimte: Flip kaart • ←/→: Vorige/Volgende",
+    "cards": "kaarten",
+    "seeans": "Zie antwoord"
   }
 }

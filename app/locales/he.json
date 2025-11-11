@@ -1,17 +1,7 @@
 {
-  "quiz": {
-    "title": "חידון נוסחת טיילור",
-    "showHint": "הצג רמז",
-    "hideHint": "הסתר רמז",
-    "previous": "קודם",
-    "next": "הבא",
-    "complete": "השלם",
-    "submit": "שלח",
-    "completeTitle": "החידון הושלם!",
-    "score": "ציון",
-    "accuracy": "דיוק",
-    "timeSpent": "זמן שהושקע",
-    "retake": "חזור על החידון",
-    "hint": "רמז"
+  "card": {
+    "tip": "חלל: כרטיס הפוך • ←/→: קודם/הבא",
+    "cards": "כרטיסים",
+    "seeans": "ראה תשובה"
   }
 }

@@ -6,15 +6,19 @@ const createSvgTemplate = (variables: any, { tpl }: any) => {
       ${variables.imports};
       ${variables.interfaces};
       const ${variables.componentName} = (${variables.props}) => {
-        const { size, color, ...newProps } = props
+        const { size, color, ...restProps } = props;
+        const newProps: any = { ...restProps };
+
         if (size) {
           newProps.width = size;
           newProps.height = size;
         }
         if (color) {
+          // 同时支持 fill 和 stroke 颜色
           newProps.fill = color;
+          newProps.stroke = color;
         }
-        props = { ...newProps };
+
         return (${variables.jsx});
       };
       ${variables.exports};

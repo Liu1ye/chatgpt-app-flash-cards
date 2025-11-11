@@ -1,17 +1,7 @@
 {
-  "quiz": {
-    "title": "Taylor Formula Quiz",
-    "showHint": "Show Hint",
-    "hideHint": "Hide Hint",
-    "previous": "Previous",
-    "next": "Next",
-    "complete": "Complete",
-    "submit": "Submit",
-    "completeTitle": "Quiz Complete!",
-    "score": "Score",
-    "accuracy": "Accuracy",
-    "timeSpent": "Time Spent",
-    "retake": "Retake Quiz",
-    "hint": "Hint"
+  "card": {
+    "tip": "Space: Flip card • ←/→: Previous/Next",
+    "cards": "cards",
+    "seeans": "See answer"
   }
 }
