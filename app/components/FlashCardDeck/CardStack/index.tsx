@@ -44,12 +44,12 @@ export const CardStack = ({ currentCard, nextCard, previousCard, direction, onFl
   const backgroundCardVariants = {
     initial: {
       scale: 0.915,
-      y: 26,
+      y: 32,
       opacity: 0.5,
     },
     animate: {
       scale: 0.915,
-      y: 26,
+      y: 32,
       opacity: 0.5,
     },
   };
@@ -60,7 +60,7 @@ export const CardStack = ({ currentCard, nextCard, previousCard, direction, onFl
       {nextCard && (
         <motion.div
           key={`bg-${nextCard.id}`}
-          className="absolute left-1/2 -translate-x-1/2 z-[1]"
+          className="absolute left-1/2 -translate-x-1/2 z-[1] w-full"
           variants={backgroundCardVariants}
           initial="initial"
           animate="animate"
@@ -74,7 +74,7 @@ export const CardStack = ({ currentCard, nextCard, previousCard, direction, onFl
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentCard.id}
-          className="absolute left-1/2 -translate-x-1/2 z-[2]"
+          className="absolute left-1/2 -translate-x-1/2 z-[2] w-full"
           custom={direction}
           variants={currentCardVariants}
           initial="enter"
