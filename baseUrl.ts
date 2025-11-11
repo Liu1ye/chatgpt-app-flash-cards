@@ -10,4 +10,4 @@
 export const baseURL =
   process.env.NODE_ENV === "development"
     ? "http://localhost:8081"
-    : "https://quiz.apps.wisebox.ai";
+    : "https://flash-card.apps.wisebox.ai";
