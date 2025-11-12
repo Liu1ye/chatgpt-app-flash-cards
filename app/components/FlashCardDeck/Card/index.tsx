@@ -29,8 +29,8 @@ export const Card = ({ card, isBackground = false, onClick }: CardProps) => {
   if (isBackground) {
     return (
       <div className={containerClasses} style={{ pointerEvents: 'none' }}>
-        <div className="flex-1 flex items-start justify-center overflow-hidden">
-          <p className={`${textClasses} tracking-[0.38px] text-text-primary font-medium`}>
+        <div className="flex-1 flex items-start justify-center overflow-hidden px-2">
+          <p className={`${textClasses} tracking-[0.38px] text-text-primary font-medium break-words whitespace-pre-wrap w-full`}>
             {card.question}
           </p>
         </div>
@@ -58,8 +58,8 @@ export const Card = ({ card, isBackground = false, onClick }: CardProps) => {
         }}
       >
         <div className={containerClasses}>
-          <div className="flex-1 flex items-start justify-center overflow-hidden">
-            <p className={`${textClasses} tracking-[0.38px] text-text-primary font-medium`}>
+          <div className="flex-1 flex items-start justify-center overflow-hidden px-2">
+            <p className={`${textClasses} tracking-[0.38px] text-text-primary font-medium break-words whitespace-pre-wrap w-full`}>
               {card.question}
             </p>
           </div>
@@ -79,8 +79,8 @@ export const Card = ({ card, isBackground = false, onClick }: CardProps) => {
         }}
       >
         <div className={containerClasses}>
-          <div className="flex-1 flex items-start justify-center overflow-hidden">
-            <p className={`${textClasses} tracking-[0.38px] text-text-primary font-medium`}>
+          <div className="flex-1 flex items-start justify-center overflow-hidden px-2">
+            <p className={`${textClasses} tracking-[0.38px] text-text-primary font-medium break-words whitespace-pre-wrap w-full`}>
               {card.answer}
             </p>
           </div>

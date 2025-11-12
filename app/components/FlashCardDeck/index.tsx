@@ -102,8 +102,9 @@ export const FlashCardDeck = ({ cards, className = '' }: FlashCardDeckProps) => 
         />
       </div>
 
-      {/* Content */}
-      <div className="relative flex flex-col h-full">
+      <div className='size-full flex-center'>
+        {/* Content */}
+      <div className="relative flex flex-col h-full w-full max-w-[492px]">
         {/* Top hint text */}
         <HintText show={!deck.hasSeenHint} />
 
@@ -172,6 +173,7 @@ export const FlashCardDeck = ({ cards, className = '' }: FlashCardDeckProps) => 
             />
           )
         }
+      </div>
       </div>
     </div>
   );
