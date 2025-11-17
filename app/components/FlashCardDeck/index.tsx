@@ -80,6 +80,11 @@ export const FlashCardDeck = ({ cards, className = '' }: FlashCardDeckProps) => 
     refresh();
   };
 
+  const handleCollect = () => {
+    deck.currentCard?.collect()
+    refresh()
+  }
+
   const currentCard = deck.currentCard;
   const nextCard = deck.nextCard;
   const previousCard = deck.previousCard;
@@ -128,6 +133,7 @@ export const FlashCardDeck = ({ cards, className = '' }: FlashCardDeckProps) => 
             previousCard={previousCard}
             direction={direction}
             onFlip={handleFlip}
+            onCollect={handleCollect}
           />
 
           {/* Next button */}

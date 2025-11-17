@@ -10,9 +10,10 @@ interface CardStackProps {
   previousCard: FlashCard | null;
   direction: 'next' | 'prev' | null;
   onFlip: () => void;
+  onCollect: () => void
 }
 
-export const CardStack = ({ currentCard, nextCard, previousCard, direction, onFlip }: CardStackProps) => {
+export const CardStack = ({ currentCard, nextCard, previousCard, direction, onFlip, onCollect }: CardStackProps) => {
   // Animation variants for the current/exiting card
   const currentCardVariants = {
     enter: (direction: 'next' | 'prev' | null) => {
@@ -82,7 +83,7 @@ export const CardStack = ({ currentCard, nextCard, previousCard, direction, onFl
           exit="exit"
           transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
         >
-          <Card card={currentCard} onClick={onFlip} />
+          <Card card={currentCard} onClick={onFlip} onCollect={onCollect} />
         </motion.div>
       </AnimatePresence>
     </div>

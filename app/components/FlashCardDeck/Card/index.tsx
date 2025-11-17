@@ -3,14 +3,17 @@
 import { motion } from 'framer-motion';
 import { FlashCard } from '@/app/components/FlashCardDeck/FlashCardManager';
 import { useTranslation } from 'react-i18next';
+import StartIcon from '@/app/assets/icons/start.svg';
+import StartFilledIcon from '@/app/assets/icons/start-filled.svg';
 
 interface CardProps {
   card: FlashCard;
   isBackground?: boolean;
   onClick?: () => void;
+  onCollect?: () => void;
 }
 
-export const Card = ({ card, isBackground = false, onClick }: CardProps) => {
+export const Card = ({ card, isBackground = false, onClick, onCollect }: CardProps) => {
 
   const { t } = useTranslation();
 
@@ -63,9 +66,15 @@ export const Card = ({ card, isBackground = false, onClick }: CardProps) => {
               {card.question}
             </p>
           </div>
-          <p className={`${hintTextClasses} tracking-[-0.3px] text-text-tertiary font-normal`}>
-            {card.getDisplayText()}
-          </p>
+          <div className={`${hintTextClasses} flex justify-between tracking-[-0.3px] text-text-tertiary font-normal`}>
+            <span>{card.getDisplayText() && t(card.getDisplayText() as string)}</span>
+            <span onClick={(e) => {
+              e.stopPropagation()
+              onCollect?.()
+            }}>{
+              card.isCollected ? <StartFilledIcon className="text-assistive-yellow-normal hover:text-assistive-yellow-hover " /> : <StartIcon className='text-icon-secondary hover:text-text-primary' />
+            }</span>
+          </div>
         </div>
       </div>
 

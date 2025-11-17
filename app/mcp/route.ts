@@ -1,6 +1,7 @@
 import { baseURL } from "@/baseUrl";
-import { createMcpHandler } from "mcp-handler";
+import { createMcpHandler, withMcpAuth } from "mcp-handler";
 import { z } from "zod";
+import verifyToken from '../lib/verifyToken';
 
 const getAppsSdkCompatibleHtml = async (baseUrl: string, path: string) => {
   const result = await fetch(`${baseUrl}${path}`);
@@ -105,9 +106,8 @@ const handler = createMcpHandler(async (server) => {
       },
       _meta: widgetMeta(flashCardsWidget),
     },
-    async (args) => {
-      // Return only the fields that the widget needs as structuredContent
-      const { language, data } = args;
+    async ({language, data}, extra) => {
+      const token = extra?.authInfo?.token;
       const { title, description, flashCards } = data;
       return {
         content: [],
@@ -124,5 +124,12 @@ const handler = createMcpHandler(async (server) => {
   );
 });
 
-export const GET = handler;
-export const POST = handler;
+
+const authHandler = withMcpAuth(handler, verifyToken, {
+  required: true, // 所有请求都需要认证
+  requiredScopes: ["read:stuff"], // 必需的权限范围
+  resourceMetadataPath: "/.well-known/oauth-protected-resource", // OAuth 元数据路径
+})
+
+export const GET = authHandler;
+export const POST = authHandler;

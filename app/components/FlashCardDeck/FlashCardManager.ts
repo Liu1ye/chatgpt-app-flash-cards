@@ -6,12 +6,14 @@ export class FlashCard {
   private _question: string;
   private _answer: string;
   private _isFlipped: boolean;
+  private _isCollected: boolean;
 
   constructor(id: string, question: string, answer: string) {
     this._id = id;
     this._question = question;
     this._answer = answer;
     this._isFlipped = false;
+    this._isCollected = false;
   }
 
   // Getters
@@ -31,6 +33,10 @@ export class FlashCard {
     return this._isFlipped;
   }
 
+  get isCollected(): boolean {
+    return this._isCollected;
+  }
+
   // Methods
   flip(): void {
     this._isFlipped = !this._isFlipped;
@@ -45,7 +51,11 @@ export class FlashCard {
   }
 
   getDisplayText(): string {
-    return this._isFlipped ? '' : 'See answer';
+    return this._isFlipped ? '' : 'card.seeans';
+  }
+
+  collect(): void {
+    this._isCollected = !this._isCollected;
   }
 }
 
