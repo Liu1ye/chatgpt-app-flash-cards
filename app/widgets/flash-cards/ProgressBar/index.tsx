@@ -1,19 +1,18 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import CircleIcon from '@/app/assets/icons/circle.svg';
+import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
+import { CircleIcon } from '@/app/assets/icons'
 
 interface ProgressBarProps {
-  current: number;
-  total: number;
-  progress: number;
-  onReset: () => void;
+  current: number
+  total: number
+  progress: number
+  onReset: () => void
 }
 
 export const ProgressBar = ({ current, total, progress, onReset }: ProgressBarProps) => {
-
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <div className="box-border flex gap-2 items-center p-4 shrink-0">
@@ -25,7 +24,7 @@ export const ProgressBar = ({ current, total, progress, onReset }: ProgressBarPr
             className="bg-interactive-bg-secondary-default rounded-lg px-3 py-2 w-10 flex items-center justify-center hover:bg-interactive-bg-secondary-hover transition-colors"
             aria-label="Reset deck"
           >
-            <CircleIcon className='text-icon-inverted-static' />
+            <CircleIcon className="text-icon-inverted-static" />
           </button>
         </div>
 
@@ -47,5 +46,5 @@ export const ProgressBar = ({ current, total, progress, onReset }: ProgressBarPr
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

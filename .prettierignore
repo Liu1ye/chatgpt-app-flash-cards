@@ -1,0 +1,28 @@
+# 依赖
+node_modules
+.pnp
+.pnp.js
+
+# 构建产物
+.next
+out
+build
+dist
+
+# 日志
+*.log
+
+# 环境变量文件
+.env
+.env.*
+
+# 锁文件
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# 其他
+.DS_Store
+coverage
+.vscode
+.idea

@@ -1,135 +1,30 @@
-import { baseURL } from "@/baseUrl";
-import { createMcpHandler, withMcpAuth } from "mcp-handler";
-import { z } from "zod";
-import verifyToken from '../lib/verifyToken';
+import { baseURL } from '@/baseUrl'
+import { createMcpHandler, withMcpAuth } from 'mcp-handler'
+import verifyToken from '../lib/verifyToken'
+import {
+  registerFetchTool,
+  registerGetFlashCardsTool,
+  registerFlashCardsGeneratorTool,
+} from './tools'
 
 const getAppsSdkCompatibleHtml = async (baseUrl: string, path: string) => {
-  const result = await fetch(`${baseUrl}${path}`);
-  return await result.text();
-};
-
-type ContentWidget = {
-  id: string;
-  title: string;
-  templateUri: string;
-  invoking: string;
-  invoked: string;
-  html: string;
-  description: string;
-  widgetDomain: string;
-};
-
-function widgetMeta(widget: ContentWidget) {
-  return {
-    "openai/outputTemplate": widget.templateUri,
-    "openai/toolInvocation/invoking": widget.invoking,
-    "openai/toolInvocation/invoked": widget.invoked,
-    "openai/widgetAccessible": false,
-    "openai/resultCanProduceWidget": true,
-  } as const;
+  const result = await fetch(`${baseUrl}${path}`)
+  return await result.text()
 }
 
 const handler = createMcpHandler(async (server) => {
-  const html = await getAppsSdkCompatibleHtml(baseURL, "/");
+  const html = await getAppsSdkCompatibleHtml(baseURL, '/')
 
-  const flashCardsWidget: ContentWidget = {
-    id: "flash-cards",
-    title: "Flash Cards",
-    templateUri: "ui://widget/flash-cards-template.html",
-    invoking: "Loading flash cards...",
-    invoked: "Flash cards loaded",
-    html: html,
-    description: "Generates flash cards based on the user's input",
-    widgetDomain: "https://sider.ai",
-  };
-  server.registerResource(
-    "flash-cards-widget",
-    flashCardsWidget.templateUri,
-    {
-      title: flashCardsWidget.title,
-      description: flashCardsWidget.description,
-      mimeType: "text/html+skybridge",
-      _meta: {
-        "openai/widgetDescription": flashCardsWidget.description,
-        "openai/widgetPrefersBorder": true,
-      },
-    },
-    async (uri) => ({
-      contents: [
-        {
-          uri: uri.href,
-          mimeType: "text/html+skybridge",
-          text: `<html>${flashCardsWidget.html}</html>`,
-          _meta: {
-            "openai/widgetDescription": flashCardsWidget.description,
-            "openai/widgetPrefersBorder": true,
-            "openai/widgetDomain": flashCardsWidget.widgetDomain,
-          },
-        },
-      ],
-    })
-  );
-
-  server.registerTool(
-    flashCardsWidget.id,
-    {
-      title: flashCardsWidget.title,
-      description: `Generate flash cards based on the user's input. You (ChatGPT) should generate the flash cards content including questions and answers`,
-      inputSchema: {
-        language: z.string().default("en").describe("Language code (ISO 639-1, e.g., 'en', 'zh-CN', 'ja'). Default: en"),
-        data: z.object({
-          title: z.string().describe("The title of the flash cards"),
-          description: z.string().describe("The description of the flash cards"),
-          flashCards: z.array(
-            z.object({
-              id: z.string().describe("The id of the flash card"),
-              question: z.string().describe("The question of the flash card"),
-              answer: z.string().describe("The answer of the flash card"),
-            })
-          ).describe("Array of flash cards")
-        }),
-      },
-      // The widget consumes only these fields as props via useWidgetProps
-      outputSchema: {
-        language: z.string(),
-        data: z.object({
-          title: z.string(),
-          description: z.string(),
-          flashCards: z.array(
-            z.object({
-              id: z.string(),
-              question: z.string(),
-              answer: z.string(),
-            })
-          ).describe("Array of flash cards. Each flash card should have a question and an answer"),
-        }),
-      },
-      _meta: widgetMeta(flashCardsWidget),
-    },
-    async ({language, data}, extra) => {
-      const token = extra?.authInfo?.token;
-      const { title, description, flashCards } = data;
-      return {
-        content: [],
-        structuredContent: {
-          language,
-          data: {
-            title,
-            description,
-            flashCards,
-          },
-        },
-      };
-    }
-  );
-});
-
-
-const authHandler = withMcpAuth(handler, verifyToken, {
-  required: true, // 所有请求都需要认证
-  requiredScopes: ["read:stuff"], // 必需的权限范围
-  resourceMetadataPath: "/.well-known/oauth-protected-resource", // OAuth 元数据路径
+  await registerFlashCardsGeneratorTool(server, html)
+  await registerGetFlashCardsTool(server, html)
+  await registerFetchTool(server)
 })
 
-export const GET = authHandler;
-export const POST = authHandler;
+const authHandler = withMcpAuth(handler, verifyToken, {
+  required: true,
+  requiredScopes: ['read:stuff'],
+  resourceMetadataPath: '/.well-known/oauth-protected-resource',
+})
+
+export const GET = authHandler
+export const POST = authHandler

@@ -1,28 +1,35 @@
-'use client';
+'use client'
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { FlashCard } from '@/app/components/FlashCardDeck/FlashCardManager';
-import { Card } from '../Card';
+import { motion, AnimatePresence } from 'framer-motion'
+import { Card } from '../Card'
+import { FlashCard } from '../FlashCardManager'
 
 interface CardStackProps {
-  currentCard: FlashCard;
-  nextCard: FlashCard | null;
-  previousCard: FlashCard | null;
-  direction: 'next' | 'prev' | null;
-  onFlip: () => void;
+  currentCard: FlashCard
+  nextCard: FlashCard | null
+  previousCard: FlashCard | null
+  direction: 'next' | 'prev' | null
+  onFlip: () => void
   onCollect: () => void
 }
 
-export const CardStack = ({ currentCard, nextCard, previousCard, direction, onFlip, onCollect }: CardStackProps) => {
+export const CardStack = ({
+  currentCard,
+  nextCard,
+  previousCard,
+  direction,
+  onFlip,
+  onCollect,
+}: CardStackProps) => {
   // Animation variants for the current/exiting card
   const currentCardVariants = {
     enter: (direction: 'next' | 'prev' | null) => {
       // Previous card enters from left (slides in + scales up)
       if (direction === 'prev') {
-        return { x: '-160%', scale: 1, y: 0, opacity: 1 };
+        return { x: '-160%', scale: 1, y: 0, opacity: 1 }
       }
       // New card enters (already in position, just scales up from background)
-      return { x: '0%', scale: 0.915, y: 32, opacity: 0 };
+      return { x: '0%', scale: 0.915, y: 32, opacity: 0 }
     },
     center: {
       x: '0%',
@@ -33,12 +40,12 @@ export const CardStack = ({ currentCard, nextCard, previousCard, direction, onFl
     exit: (direction: 'next' | 'prev' | null) => {
       // Going forward: current card slides left
       if (direction === 'next') {
-        return { x: '-160%', scale: 1, y: 0, opacity: 1 };
+        return { x: '-160%', scale: 1, y: 0, opacity: 1 }
       }
       // Going back: current card shrinks to background position with reduced opacity
-      return { x: '0%', scale: 0.915, y: 32, opacity: 0 };
+      return { x: '0%', scale: 0.915, y: 32, opacity: 0 }
     },
-  };
+  }
 
   // Animation variants for the background card (next card preview)
   // Position it slightly lower so bottom edge is visible below the front card
@@ -53,7 +60,7 @@ export const CardStack = ({ currentCard, nextCard, previousCard, direction, onFl
       y: 32,
       opacity: 0.5,
     },
-  };
+  }
 
   return (
     <div className="relative flex-1 size-full">
@@ -87,5 +94,5 @@ export const CardStack = ({ currentCard, nextCard, previousCard, direction, onFl
         </motion.div>
       </AnimatePresence>
     </div>
-  );
-};
+  )
+}

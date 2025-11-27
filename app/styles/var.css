@@ -343,9 +343,9 @@
   /* Component */
   --color-sidebar-bg: var(--gray-50);
   --color-mobile-bg: var(--gray-0);
-  --color-icon-secondary: #5D5D5D;
-  --color-assistive-yellow-normal: #FFCB29;
-  --color-assistive-yellow-hover: #FFD976;
+  --color-icon-secondary: #5d5d5d;
+  --color-assistive-yellow-normal: #ffcb29;
+  --color-assistive-yellow-hover: #ffd976;
 }
 
 @layer base {
@@ -531,9 +531,9 @@
     /* Component */
     --color-sidebar-bg: var(--gray-900);
     --color-mobile-bg: #000000;
-    --color-icon-secondary: #CDCDCD;
-    --color-assistive-yellow-normal: #FFCB29;
-    --color-assistive-yellow-hover: #FFD976;
+    --color-icon-secondary: #cdcdcd;
+    --color-assistive-yellow-normal: #ffcb29;
+    --color-assistive-yellow-hover: #ffd976;
   }
 }
 

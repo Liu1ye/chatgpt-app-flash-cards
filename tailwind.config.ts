@@ -136,21 +136,17 @@ const config: Config = {
         },
         // https://github.com/w3c/csswg-drafts/issues/1724
         '.bg-gradient-to-start': {
-          'background-image':
-            'linear-gradient(to left, var(--tw-gradient-stops))',
+          'background-image': 'linear-gradient(to left, var(--tw-gradient-stops))',
 
           [`&:where([dir="rtl"], [dir="rtl"] *)`]: {
-            'background-image':
-              'linear-gradient(to right, var(--tw-gradient-stops))',
+            'background-image': 'linear-gradient(to right, var(--tw-gradient-stops))',
           },
         },
         '.bg-gradient-to-end': {
-          'background-image':
-            'linear-gradient(to right, var(--tw-gradient-stops))',
+          'background-image': 'linear-gradient(to right, var(--tw-gradient-stops))',
 
           [`&:where([dir="rtl"], [dir="rtl"] *)`]: {
-            'background-image':
-              'linear-gradient(to left, var(--tw-gradient-stops))',
+            'background-image': 'linear-gradient(to left, var(--tw-gradient-stops))',
           },
         },
       })

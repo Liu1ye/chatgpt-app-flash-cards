@@ -25,8 +25,8 @@
   :host,
   html {
     --font-family:
-      ui-sans-serif, -apple-system, system-ui, Segoe UI, Helvetica,
-      Apple Color Emoji, Arial, sans-serif, Segoe UI Emoji, Segoe UI Symbol;
+      ui-sans-serif, -apple-system, system-ui, Segoe UI, Helvetica, Apple Color Emoji, Arial,
+      sans-serif, Segoe UI Emoji, Segoe UI Symbol;
     -webkit-text-size-adjust: 100%;
     font-feature-settings: normal;
     -webkit-tap-highlight-color: transparent;

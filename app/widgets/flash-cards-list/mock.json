@@ -1,0 +1,75 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "@type": "type.googleapis.com/Resource.v1.ListResourceResponse",
+    "total": "1",
+    "data": [
+      {
+        "title": "英文短句翻译卡片",
+        "description": "用于练习常用英文短句及其中文含义",
+        "createAt": "2025-6-29",
+        "flashCards": [
+          {
+            "id": "1",
+            "question": "Good morning!",
+            "answer": "早上好！"
+          },
+          {
+            "id": "2",
+            "question": "How are you doing?",
+            "answer": "你过得怎么样？"
+          },
+          {
+            "id": "3",
+            "question": "Could you help me?",
+            "answer": "你能帮我吗？"
+          },
+          {
+            "id": "4",
+            "question": "I really appreciate it.",
+            "answer": "我真的很感激。"
+          },
+          {
+            "id": "5",
+            "question": "See you tomorrow!",
+            "answer": "明天见！"
+          }
+        ]
+      },
+      {
+        "title": "英文短句翻译卡片2",
+        "description": "用于练习常用英文短句及其中文含义",
+        "createAt": "2025-6-29",
+        "flashCards": [
+          {
+            "id": "1",
+            "question": "Good morning!",
+            "answer": "早上好！"
+          },
+          {
+            "id": "2",
+            "question": "How are you doing?",
+            "answer": "你过得怎么样？"
+          },
+          {
+            "id": "3",
+            "question": "Could you help me?",
+            "answer": "你能帮我吗？"
+          },
+          {
+            "id": "4",
+            "question": "I really appreciate it.",
+            "answer": "我真的很感激。"
+          },
+          {
+            "id": "5",
+            "question": "See you tomorrow!",
+            "answer": "明天见！"
+          }
+        ]
+      }
+    ],
+    "current": "2025-11-26T09:30:15.376001901Z"
+  }
+}

@@ -18,13 +18,13 @@
   @keyframes scaleXIn {
     from {
       transform: translate(var(--tw-translate-x, 0), var(--tw-translate-y, 0))
-        rotate(var(--tw-rotate, 0)) skewX(var(--tw-skew-x, 0))
-        skewY(var(--tw-skew-y, 0)) scaleX(0) scaleY(var(--tw-scale-y, 1));
+        rotate(var(--tw-rotate, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(0)
+        scaleY(var(--tw-scale-y, 1));
     }
     to {
       transform: translate(var(--tw-translate-x, 0), var(--tw-translate-y, 0))
-        rotate(var(--tw-rotate, 0)) skewX(var(--tw-skew-x, 0))
-        skewY(var(--tw-skew-y, 0)) scaleX(1) scaleY(var(--tw-scale-y, 1));
+        rotate(var(--tw-rotate, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(1)
+        scaleY(var(--tw-scale-y, 1));
     }
   }
 
@@ -64,19 +64,16 @@
 
   /* 阴影和 z-index 也可以定义为 tokens */
   --shadow-shallow-near:
-    0 2px 8px var(--color-shadow-overflow-2),
-    0 4px 16px var(--color-shadow-overflow-2),
+    0 2px 8px var(--color-shadow-overflow-2), 0 4px 16px var(--color-shadow-overflow-2),
     0 8px 32px var(--color-shadow-overflow-2);
 
   --shadow-black-middle:
     0 0 0 1px #ffffff1f, 0 2px 8px -4px var(--color-shadow-overflow-8),
-    0 4px 16px var(--color-shadow-overflow-12),
-    0 8px 32px 8px var(--color-shadow-overflow-4);
+    0 4px 16px var(--color-shadow-overflow-12), 0 8px 32px 8px var(--color-shadow-overflow-4);
 
   --shadow-black-far:
     0 0 0 1px #ffffff1f, 0 4px 16px -8px var(--color-shadow-overflow-16),
-    0 8px 32px var(--color-shadow-overflow-12),
-    0 16px 64px 16px var(--color-shadow-overflow-8);
+    0 8px 32px var(--color-shadow-overflow-12), 0 16px 64px 16px var(--color-shadow-overflow-8);
 
   --z-1: 1;
 }

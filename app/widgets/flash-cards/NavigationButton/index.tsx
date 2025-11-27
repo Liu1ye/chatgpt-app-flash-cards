@@ -1,11 +1,11 @@
-'use client';
+'use client'
 
-import ArrowIcon from '@/app/assets/icons/arrow.svg';
+import { ArrowIcon } from '@/app/assets/icons'
 
 interface NavigationButtonProps {
-  direction: 'prev' | 'next';
-  disabled?: boolean;
-  onClick: () => void;
+  direction: 'prev' | 'next'
+  disabled?: boolean
+  onClick: () => void
 }
 
 export const NavigationButton = ({
@@ -13,8 +13,8 @@ export const NavigationButton = ({
   disabled = false,
   onClick,
 }: NavigationButtonProps) => {
-  const isPrev = direction === 'prev';
-  const ariaLabel = isPrev ? 'Previous card' : 'Next card';
+  const isPrev = direction === 'prev'
+  const ariaLabel = isPrev ? 'Previous card' : 'Next card'
 
   return (
     <button
@@ -27,5 +27,5 @@ export const NavigationButton = ({
         <ArrowIcon className="w-[24px] h-[24px] text-text-primary" />
       </div>
     </button>
-  );
-};
+  )
+}

@@ -1,12 +1,7 @@
-"use client";
+'use client'
 
-import dynamic from "next/dynamic";
-const FlashCardsPage = dynamic(() => import("./FlashCards/page"), {
-  ssr: false,
-});
+import WidgetSelector from './widgets'
 
 export default function Home() {
-  return (
-      <FlashCardsPage />
-  );
+  return <WidgetSelector />
 }

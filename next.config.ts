@@ -30,9 +30,7 @@ const createSvgTemplate = (variables: any, { tpl }: any) => {
  */
 const webpackSvgr: NextConfig['webpack'] = (config, context) => {
   // Grab the existing rule that handles SVG imports
-  const fileLoaderRule = config.module.rules.find((rule: any) =>
-    rule.test?.test?.('.svg'),
-  )
+  const fileLoaderRule = config.module.rules.find((rule: any) => rule.test?.test?.('.svg'))
 
   config.module.rules.push(
     // 处理svg作为字符串导入
@@ -81,7 +79,7 @@ const webpackSvgr: NextConfig['webpack'] = (config, context) => {
           },
         },
       ],
-    },
+    }
   )
 
   // Modify the file loader rule to ignore *.svg, since we have it handled now.

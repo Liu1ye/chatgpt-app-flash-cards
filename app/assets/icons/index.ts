@@ -1,0 +1,10 @@
+// 为每个 SVG 文件创建命名导出
+export { default as ArrowIcon } from './arrow.svg'
+export { default as CircleIcon } from './circle.svg'
+export { default as LoadingIcon } from './loading.svg'
+export { default as StartFilledIcon } from './start-filled.svg'
+export { default as StartIcon } from './start.svg'
+export { default as ArrowLeftLgIcon } from './arrow-left-lg.svg'
+export { default as ArrowRightLgIcon } from './arrow-right-lg.svg'
+export { default as FlashCardIcon } from './flashcard.svg'
+export { default as RightIcon } from './right.svg'
