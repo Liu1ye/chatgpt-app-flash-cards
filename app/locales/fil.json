@@ -2,6 +2,10 @@
   "card": {
     "tip": "Espasyo: Baligtarin ang card • ←/→: Nakaraang/Susunod",
     "cards": "mga card",
-    "seeans": "Tingnan ang sagot"
+    "seeans": "Tingnan ang sagot",
+    "my-card": "Ang Aking Flashcards",
+    "no-file": "Walang mga file pa",
+    "view": "Tumingin",
+    "back": "bumalik"
   }
 }

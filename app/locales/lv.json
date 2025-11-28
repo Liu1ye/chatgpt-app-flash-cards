@@ -2,6 +2,10 @@
   "card": {
     "tip": "Telpa: Pagrieziet karti • ←/→: Iepriekšējā/Nākamā",
     "cards": "kartes",
-    "seeans": "Skatīt atbildi"
+    "seeans": "Skatīt atbildi",
+    "my-card": "Manas flashkartes",
+    "no-file": "Vēl nav failu",
+    "view": "Skatīt",
+    "back": "atpakaļ"
   }
 }

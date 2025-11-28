@@ -2,6 +2,10 @@
   "card": {
     "tip": "Raum: Karte umdrehen • ←/→: Vorherige/Nächste",
     "cards": "Karten",
-    "seeans": "Antwort anzeigen"
+    "seeans": "Antwort anzeigen",
+    "my-card": "Meine Lernkarten",
+    "no-file": "Noch keine Dateien",
+    "view": "Ansehen",
+    "back": "Zurück"
   }
 }

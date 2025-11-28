@@ -1,4 +1,4 @@
-import { API_URL } from '../lib/constant'
+import { apiURL } from '../baseURL'
 
 export const appName = 'ChitChat_Web'
 export const appVersion = '1.0.0'
@@ -23,7 +23,7 @@ export type SiderUserInfo = {
 }
 
 export async function request(pathname: string, options?: RequestInit) {
-  const url = pathname.startsWith('http') ? pathname : API_URL + pathname
+  const url = pathname.startsWith('http') ? pathname : apiURL + pathname
   console.log('request: ', url)
   return fetch(url, {
     method: options?.method || 'GET',

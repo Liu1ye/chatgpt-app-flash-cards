@@ -2,6 +2,10 @@
   "card": {
     "tip": "Priestor: Prevrátiť kartu • ←/→: Predchádzajúca/Následujúca",
     "cards": "karty",
-    "seeans": "Zobraziť odpoveď"
+    "seeans": "Zobraziť odpoveď",
+    "my-card": "Moje kartičky",
+    "no-file": "Zatiaľ žiadne súbory",
+    "view": "Zobraziť",
+    "back": "späť"
   }
 }

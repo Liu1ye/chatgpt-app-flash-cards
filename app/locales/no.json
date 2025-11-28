@@ -2,6 +2,10 @@
   "card": {
     "tip": "Rom: Vri kort • ←/→: Forrige/Neste",
     "cards": "kort",
-    "seeans": "Se svar"
+    "seeans": "Se svar",
+    "my-card": "Mine flashkort",
+    "no-file": "Ingen filer ennå",
+    "view": "Vis",
+    "back": "tilbake"
   }
 }

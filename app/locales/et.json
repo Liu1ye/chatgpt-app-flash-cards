@@ -2,6 +2,10 @@
   "card": {
     "tip": "Ruum: Pööratav kaart • ←/→: Eelmine/Järgmine",
     "cards": "kaardid",
-    "seeans": "Vaata vastust"
+    "seeans": "Vaata vastust",
+    "my-card": "Minu mälukaardid",
+    "no-file": "Failid puuduvad",
+    "view": "Vaata",
+    "back": "tagasi"
   }
 }

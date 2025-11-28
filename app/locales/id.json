@@ -2,6 +2,10 @@
   "card": {
     "tip": "Ruang: Kartu flip • ←/→: Sebelumnya/Selanjutnya",
     "cards": "kartu",
-    "seeans": "Lihat jawaban"
+    "seeans": "Lihat jawaban",
+    "my-card": "Kartu Flash Saya",
+    "no-file": "Belum ada file",
+    "view": "Lihat",
+    "back": "kembali"
   }
 }

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 
-export const FlashCardSkeleton = () => {
+export const Skeleton = () => {
   return (
     <div className="w-[100vw] h-[100vh] bg-bg-tertiary">
       <div className="w-full h-full bg-utility-scrollbar/30 rounded-2xl shadow-lg overflow-hidden relative">

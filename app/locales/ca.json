@@ -2,6 +2,10 @@
   "card": {
     "tip": "Espai: Targeta giratòria • ←/→: Anterior/Siguiente",
     "cards": "targetes",
-    "seeans": "Veure resposta"
+    "seeans": "Veure resposta",
+    "my-card": "Les meves targetes de memòria",
+    "no-file": "Encara no hi ha fitxers",
+    "view": "Veure",
+    "back": "enrere"
   }
 }

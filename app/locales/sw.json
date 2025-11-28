@@ -2,6 +2,10 @@
   "card": {
     "tip": "Anga: Kadi ya kugeuza • ←/→: Ya Kwanza/Yafuatayo",
     "cards": "kadi",
-    "seeans": "Tazama jibu"
+    "seeans": "Tazama jibu",
+    "my-card": "Kadi Zangu za Flash",
+    "no-file": "Hakuna faili bado",
+    "view": "Tazama",
+    "back": "nyuma"
   }
 }

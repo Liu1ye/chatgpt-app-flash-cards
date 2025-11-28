@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { CircleIcon } from '@/app/assets/icons'
+import { cn } from '@/app/lib/cn'
+import { useIsMobile } from '@/app/hooks'
 
 interface ProgressBarProps {
   current: number
@@ -13,6 +15,7 @@ interface ProgressBarProps {
 
 export const ProgressBar = ({ current, total, progress, onReset }: ProgressBarProps) => {
   const { t } = useTranslation()
+  const { isMobile } = useIsMobile()
 
   return (
     <div className="box-border flex gap-2 items-center p-4 shrink-0">
@@ -29,7 +32,15 @@ export const ProgressBar = ({ current, total, progress, onReset }: ProgressBarPr
         </div>
 
         {/* Progress bar */}
-        <div className="bg-utility-scrollbar rounded-[999px] w-[180px] max-w-[480px] h-[6px] overflow-hidden hidden md:block">
+        <div
+          className={cn(
+            'bg-utility-scrollbar rounded-[999px] w-[180px] max-w-[480px] h-[6px] overflow-hidden',
+            {
+              hidden: isMobile,
+              block: !isMobile,
+            }
+          )}
+        >
           <motion.div
             className="bg-icon-inverted-static h-full rounded-[999px]"
             initial={{ width: 0 }}

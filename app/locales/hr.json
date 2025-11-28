@@ -2,6 +2,10 @@
   "card": {
     "tip": "Prostor: Okreni karticu • ←/→: Prethodna/Naredna",
     "cards": "kartice",
-    "seeans": "Pogledaj odgovor"
+    "seeans": "Pogledaj odgovor",
+    "my-card": "Moje Flashkartice",
+    "no-file": "Još nema datoteka",
+    "view": "Pogledaj",
+    "back": "natrag"
   }
 }

@@ -2,6 +2,10 @@
   "card": {
     "tip": "Spațiu: Răsturnați cardul • ←/→: Precedent/Următor",
     "cards": "carduri",
-    "seeans": "Vezi răspunsul"
+    "seeans": "Vezi răspunsul",
+    "my-card": "Cardurile mele",
+    "no-file": "Nu există fișiere încă",
+    "view": "Vizualizare",
+    "back": "înapoi"
   }
 }

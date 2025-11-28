@@ -2,6 +2,10 @@
   "card": {
     "tip": "Űr: Kártya megfordítása • ←/→: Előző/Következő",
     "cards": "kártyák",
-    "seeans": "Válasz megtekintése"
+    "seeans": "Válasz megtekintése",
+    "my-card": "A Flashkártyáim",
+    "no-file": "Még nincsenek fájlok",
+    "view": "Megtekintés",
+    "back": "vissza"
   }
 }

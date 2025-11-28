@@ -16,7 +16,7 @@ export const Card = ({ card, isBackground = false, onClick, onCollect }: CardPro
   const { t } = useTranslation()
 
   const containerClasses = isBackground
-    ? 'border border-border-default bg-bg-primary rounded-[32px] p-[29.305px] flex flex-col gap-[9.158px] w-full md:h-[449px] h-[381px]'
+    ? 'border border-border-default bg-bg-primary rounded-[32px] p-[29.305px] flex flex-col gap-[9.158px] w-full h-[426px]'
     : 'border border-border-default bg-bg-primary rounded-[32px] p-8 flex flex-col gap-[10px] h-full shadow-[inset_0px_-3px_4px_0px_var(--color-utility-scrollbar)]'
 
   const textClasses = isBackground
@@ -50,7 +50,7 @@ export const Card = ({ card, isBackground = false, onClick, onCollect }: CardPro
       transition={{ duration: 0.6 }}
       style={{ transformStyle: 'preserve-3d' }}
       onClick={onClick}
-      className="cursor-pointer w-full md:h-[449px] h-[381px]"
+      className="cursor-pointer w-full h-[426px]"
     >
       {/* Front of card */}
       <div

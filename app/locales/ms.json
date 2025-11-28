@@ -2,6 +2,10 @@
   "card": {
     "tip": "Ruang: Kad flip • ←/→: Sebelum/Seterusnya",
     "cards": "kad",
-    "seeans": "Lihat jawapan"
+    "seeans": "Lihat jawapan",
+    "my-card": "Kad Imbas Saya",
+    "no-file": "Tiada fail lagi",
+    "view": "Lihat",
+    "back": "kembali"
   }
 }

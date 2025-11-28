@@ -6,11 +6,14 @@ import { HintText } from './HintText'
 import { NavigationButton } from './NavigationButton'
 import { CardStack } from './CardStack'
 import { ProgressBar } from './ProgressBar'
-import { useIsMobile, useWidgetProps } from '@/app/hooks'
-import { FlashCardSkeleton } from '@/app/components/Skeleton'
+import { useCallTool, useIsMobile, useWidgetProps, useWidgetState } from '@/app/hooks'
+import { Skeleton } from '@/app/components/Skeleton'
 import { FlashCardData } from '../types'
 import { FlashCard, FlashCardDeck as FlashCardDeckClass } from './FlashCardManager'
 import { useToast } from '@/app/context/toastContext'
+import GPTButton from '@/app/components/GPTButton'
+import { ArrowLeftLgIcon } from '@/app/assets/icons'
+import { useTranslation } from 'react-i18next'
 
 type FlashCardsProps = {
   flashCardsDataFromList?: FlashCardData
@@ -22,7 +25,13 @@ const FlashCards: FC<FlashCardsProps> = (props) => {
   const { flashCardsDataFromList, isFromList = false, onClickBackToList } = props
 
   const widgetProps = useWidgetProps<{ language?: string; data?: FlashCardData }>()
+  const [widgetState, setWidgetState] = useWidgetState({
+    saved: false,
+  })
+  const callTool = useCallTool()
   const questionData = flashCardsDataFromList || widgetProps?.data
+
+  const { t } = useTranslation()
 
   const deck = useMemo(() => {
     if (!questionData?.flashCards) return null
@@ -54,6 +63,28 @@ const FlashCards: FC<FlashCardsProps> = (props) => {
     return () => window.removeEventListener('keydown', handleKeyPress)
   }, [deck, refresh])
 
+  useEffect(() => {
+    if (isFromList || !questionData) return
+    if (widgetState.saved) {
+      return
+    }
+    saveFlashCards()
+  }, [])
+
+  const saveFlashCards = async () => {
+    try {
+      ;(await callTool('fetch', {
+        id: '/library/v1/flashcard',
+        method: 'POST',
+        payload: {
+          data: { ...questionData, cards: questionData?.flashCards },
+          wisebaseId: 'inbox',
+        },
+      })) as any
+      setWidgetState({ saved: true })
+    } catch (error) {}
+  }
+
   const handleFlip = () => {
     deck?.flipCurrentCard()
     refresh()
@@ -82,7 +113,7 @@ const FlashCards: FC<FlashCardsProps> = (props) => {
 
   const handleCollect = () => {
     // window?.openai?.callTool('fetch', {})
-    showToast('111', 'success', 2000, {
+    showToast('111', 'success', 1500, {
       label: 'View',
       onClick: () => {
         console.log(111)
@@ -97,7 +128,7 @@ const FlashCards: FC<FlashCardsProps> = (props) => {
   const previousCard = deck?.previousCard
 
   if (!deck) {
-    return <FlashCardSkeleton />
+    return <Skeleton />
   }
 
   if (!currentCard) {
@@ -109,7 +140,7 @@ const FlashCards: FC<FlashCardsProps> = (props) => {
       initial={{ opacity: 0, x: 40 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.3, ease: 'easeOut' }}
-      className="relative max-w-[800px] md:h-[587px] h-[521px] w-full h-full rounded-[24px] bg-bg-primary border-[0.5px] border-border-heavy overflow-hidden"
+      className="relative max-w-[800px] h-[564px] w-full rounded-[24px] bg-bg-primary border-[0.5px] border-border-heavy overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -121,12 +152,14 @@ const FlashCards: FC<FlashCardsProps> = (props) => {
         />
       </div>
       {isFromList && (
-        <div
+        <GPTButton
+          className="text-text-inverted-static cursor-pointer absolute pt-[16px]"
           onClick={onClickBackToList && onClickBackToList}
-          className="w-full relative p-[18px_22px_0_22px] text-text-inverted-static cursor-pointer"
+          variant="text"
+          icon={<ArrowLeftLgIcon size={12} />}
         >
-          back
-        </div>
+          {t('card.back')}
+        </GPTButton>
       )}
       <div className="size-full flex-center">
         {/* Content */}

@@ -2,6 +2,10 @@
   "card": {
     "tip": "Prostor: Otočit kartu • ←/→: Předchozí/Následující",
     "cards": "karty",
-    "seeans": "Zobrazit odpověď"
+    "seeans": "Zobrazit odpověď",
+    "my-card": "Moje flashkarty",
+    "no-file": "Zatím žádné soubory",
+    "view": "Zobrazit",
+    "back": "zpět"
   }
 }

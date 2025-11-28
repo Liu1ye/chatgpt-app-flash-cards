@@ -2,6 +2,10 @@
   "card": {
     "tip": "Espace : Carte à retourner • ←/→ : Précédent/Suivant",
     "cards": "cartes",
-    "seeans": "Voir la réponse"
+    "seeans": "Voir la réponse",
+    "my-card": "Mes cartes mémoire",
+    "no-file": "Aucun fichier pour le moment",
+    "view": "Voir",
+    "back": "retour"
   }
 }

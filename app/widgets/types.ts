@@ -10,8 +10,19 @@ export interface FlashCardDeckProps {
 }
 
 export interface FlashCardData {
+  id?: string
   title: string
   description: string
   createAt?: string
   flashCards: FlashCardDataItem[]
+}
+
+export interface FlashCardsResponse {
+  total: string
+  items: {
+    id: string
+    userId: string
+    wisebaseId: string
+    data: FlashCardData
+  }[]
 }

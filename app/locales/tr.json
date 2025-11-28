@@ -2,6 +2,10 @@
   "card": {
     "tip": "Uzay: Kartı çevir • ←/→: Önceki/Sonraki",
     "cards": "kartlar",
-    "seeans": "Cevabı gör"
+    "seeans": "Cevabı gör",
+    "my-card": "Benim Flash Kartlarım",
+    "no-file": "Henüz dosya yok",
+    "view": "Görüntüle",
+    "back": "geri"
   }
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import '@/app/styles/globals.css'
-import { baseURL } from '@/baseUrl'
 import InitialComp from './components/InitialComp'
+import { baseURL } from './baseURL'
 
 export const metadata: Metadata = {
   title: 'Flash Cards',

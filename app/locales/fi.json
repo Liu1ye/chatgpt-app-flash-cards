@@ -2,6 +2,10 @@
   "card": {
     "tip": "Avaruus: Käännä kortti • ←/→: Edellinen/Seuraava",
     "cards": "kortit",
-    "seeans": "Näytä vastaus"
+    "seeans": "Näytä vastaus",
+    "my-card": "Omat kortit",
+    "no-file": "Ei tiedostoja vielä",
+    "view": "Näytä",
+    "back": "takaisin"
   }
 }

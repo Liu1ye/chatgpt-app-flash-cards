@@ -2,6 +2,10 @@
   "card": {
     "tip": "Rum: Vend kort • ←/→: Forrige/Næste",
     "cards": "kort",
-    "seeans": "Se svar"
+    "seeans": "Se svar",
+    "my-card": "Mine Flashcards",
+    "no-file": "Ingen filer endnu",
+    "view": "Vis",
+    "back": "tilbage"
   }
 }

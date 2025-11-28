@@ -2,6 +2,10 @@
   "card": {
     "tip": "Spazio: Flip card • ←/→: Precedente/Successione",
     "cards": "carte",
-    "seeans": "Vedi risposta"
+    "seeans": "Vedi risposta",
+    "my-card": "Le mie Flashcard",
+    "no-file": "Nessun file ancora",
+    "view": "Visualizza",
+    "back": "indietro"
   }
 }

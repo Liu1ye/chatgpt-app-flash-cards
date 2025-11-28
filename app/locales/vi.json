@@ -2,6 +2,10 @@
   "card": {
     "tip": "Không gian: Lật thẻ • ←/→: Trước/Kế tiếp",
     "cards": "thẻ",
-    "seeans": "Xem câu trả lời"
+    "seeans": "Xem câu trả lời",
+    "my-card": "Thẻ nhớ của tôi",
+    "no-file": "Chưa có tệp nào",
+    "view": "Xem",
+    "back": "quay lại"
   }
 }

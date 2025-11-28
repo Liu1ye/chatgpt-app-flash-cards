@@ -1,4 +1,4 @@
-import { baseURL } from '@/baseUrl'
+import { apiURL, baseURL } from '@/app/baseURL'
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { z } from 'zod'
 
@@ -28,22 +28,26 @@ export async function registerFetchTool(server: McpServer) {
     },
     async (data, extra) => {
       try {
-        console.log(extra, data, 'token')
         const { id, method, payload, queryParams, headers } = data
         const token = extra?.authInfo?.token
         const searchParams = new URLSearchParams({ ...queryParams })
-        const url = new URL(id, baseURL)
+        const cleanApiURL = apiURL.endsWith('/') ? apiURL : `${apiURL}/`
+        const cleanId = id.startsWith('/') ? id.slice(1) : id
+        const url = new URL(cleanId, cleanApiURL)
         url.search = searchParams.toString()
 
         const requestHeaders = new Headers({
           'Content-Type': 'application/json',
-          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+          'X-App-Name': 'ChitChat_Web',
+          ...(token ? { Authorization: token } : {}),
           ...headers,
         })
 
         const requestMethod = method || 'GET'
 
         const body = ['POST', 'PUT'].includes(requestMethod) ? JSON.stringify(payload) : undefined
+
+        console.log(token, 'url-------------------------------')
 
         const response = await fetch(url.toString(), {
           method: requestMethod,

@@ -2,6 +2,10 @@
   "card": {
     "tip": "Erdvė: Apversti kortelę • ←/→: Ankstesnė/Kitą",
     "cards": "kortelės",
-    "seeans": "Žiūrėti atsakymą"
+    "seeans": "Žiūrėti atsakymą",
+    "my-card": "Mano atmintinės",
+    "no-file": "Dar nėra failų",
+    "view": "Peržiūrėti",
+    "back": "atgal"
   }
 }

@@ -2,6 +2,10 @@
   "card": {
     "tip": "Przestrzeń: Przewróć kartę • ←/→: Poprzednia/Następna",
     "cards": "karty",
-    "seeans": "Zobacz odpowiedź"
+    "seeans": "Zobacz odpowiedź",
+    "my-card": "Moje fiszki",
+    "no-file": "Brak plików",
+    "view": "Zobacz",
+    "back": "wróć"
   }
 }

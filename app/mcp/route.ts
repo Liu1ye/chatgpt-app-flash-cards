@@ -1,4 +1,3 @@
-import { baseURL } from '@/baseUrl'
 import { createMcpHandler, withMcpAuth } from 'mcp-handler'
 import verifyToken from '../lib/verifyToken'
 import {
@@ -6,6 +5,7 @@ import {
   registerGetFlashCardsTool,
   registerFlashCardsGeneratorTool,
 } from './tools'
+import { baseURL } from '../baseURL'
 
 const getAppsSdkCompatibleHtml = async (baseUrl: string, path: string) => {
   const result = await fetch(`${baseUrl}${path}`)

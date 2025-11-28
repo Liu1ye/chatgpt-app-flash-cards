@@ -2,6 +2,10 @@
   "card": {
     "tip": "Ruimte: Flip kaart • ←/→: Vorige/Volgende",
     "cards": "kaarten",
-    "seeans": "Zie antwoord"
+    "seeans": "Zie antwoord",
+    "my-card": "Mijn Flashcards",
+    "no-file": "Nog geen bestanden",
+    "view": "Bekijk",
+    "back": "terug"
   }
 }

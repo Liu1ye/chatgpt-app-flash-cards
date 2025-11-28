@@ -2,6 +2,10 @@
   "card": {
     "tip": "Utrymme: Vänd kort • ←/→: Föregående/Nästa",
     "cards": "kort",
-    "seeans": "Se svar"
+    "seeans": "Se svar",
+    "my-card": "Mina flashkort",
+    "no-file": "Inga filer än",
+    "view": "Visa",
+    "back": "tillbaka"
   }
 }
